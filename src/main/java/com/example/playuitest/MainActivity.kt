@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(){
@@ -63,6 +64,31 @@ class MainActivity : AppCompatActivity(){
                     setToolbar2Alpha(alpha)
                 }
             }
+
+           /* //垂直方向偏移量
+            var offset = Math.abs(verticalOffset)
+            //最大偏移距离
+            var scrollRange = appBarLayout.totalScrollRange
+            if (offset <= scrollRange / 2) {//当滑动没超过一半，展开状态下toolbar显示内容，根据收缩位置，改变透明值
+                toolbar1!!.visibility = View.VISIBLE
+                toolbar2!!.visibility = View.GONE
+                //根据偏移百分比 计算透明值
+                var scale2 = offset.toFloat()  / (scrollRange / 2)
+                var alpha2 =  (255 * scale2).toInt()
+                toolbar1!!.setBackgroundColor(Color.argb(alpha2, 25, 131, 209))
+            } else {//当滑动超过一半，收缩状态下toolbar显示内容，根据收缩位置，改变透明值
+
+                toolbar1!!.visibility = View.GONE
+                toolbar2!!.visibility = View.VISIBLE
+                var scale3 = (scrollRange  - offset ).toFloat() / (scrollRange / 2)
+                var alpha3 =  (255 * scale3).toInt()
+                toolbar2!!.setBackgroundColor(Color.argb(alpha3, 25, 131, 209))
+            }
+            //根据偏移百分比计算扫一扫布局的透明度值
+            var scale = offset.toFloat()  / scrollRange
+            var alpha = (255 * scale).toInt()
+            bgContent.setBackgroundColor(Color.argb(alpha, 25, 131, 209))
+*/
         })
     }
 

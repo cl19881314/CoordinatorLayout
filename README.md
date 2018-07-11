@@ -1,12 +1,12 @@
 # CoordinatorLayout
 仿支付宝顶部滑动效果
 
-##CoordinatorLayout
+## CoordinatorLayout
 又名协调者布局，它是support.design包中的控件，所以使用的时候要导入compile ‘com.android.support:design:23.3.0’包。简单来说，CoordinatorLayout是用来
 协调其子view并以触摸影响布局的形式产生动画效果的一个super-powered FrameLayout，其典型的子View包括：FloatingActionButton，SnackBar。
 注意：CoordinatorLayout是一个顶级父View。
 
-##AppBarLayout
+## AppBarLayout
 AppBarLayout是LinearLayout的子类，必须在它的子view上设置app:layout_scrollFlags属性或者是在代码中调用setScrollFlags()设置这个属性。
 
 AppBarLayout的子布局有5种滚动标识(上面代码CollapsingToolbarLayout中配置的app:layout_scrollFlags属性)：
@@ -19,7 +19,7 @@ exitUntilCollapsed：当你定义了一个minHeight，此布局将在滚动到�
 snap：当一个滚动事件结束，如果视图是部分可见的，那么它将被滚动到收缩或展开。例如，如果视图只有底部25%显示，它将折叠。相反，如果它的底部75%可见，那么它将
 完全展开。
 
-##CollapsingToolbarLayout
+## CollapsingToolbarLayout
 CollapsingToolbarLayout作用是提供了一个可以折叠的Toolbar，它继承自FrameLayout，给它设置layout_scrollFlags，它可以控制包含在
 CollapsingToolbarLayout中的控件(如：ImageView、Toolbar)在响应layout_behavior事件时作出相应的scrollFlags滚动事件(移除屏幕或固定在屏幕顶端)。
 CollapsingToolbarLayout可以通过app:contentScrim设置折叠时工具栏布局的颜色，通过app:statusBarScrim设置折叠时状态栏的颜色。默认contentScrim是
